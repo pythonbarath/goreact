@@ -1,28 +1,38 @@
 const projects = [
   {
     name: "Pulse Commerce",
-    summary: "A clean analytics dashboard for real-time product and revenue tracking.",
+    summary:
+      "A clean analytics dashboard for real-time product and revenue tracking.",
     stack: "React, Go, PostgreSQL",
   },
   {
     name: "Studio Grid",
-    summary: "Booking platform for creative professionals with instant schedule sync.",
+    summary:
+      "Booking platform for creative professionals with instant schedule sync.",
     stack: "TypeScript, Go, Redis",
   },
   {
     name: "Field Ops",
-    summary: "Mobile-first tool for managing inspections, reports, and on-site tasks.",
+    summary:
+      "Mobile-first tool for managing inspections, reports, and on-site tasks.",
     stack: "React, Go, SQLite",
   },
 ];
 
-const skills = ["Go", "React", "REST APIs", "SQL", "UI Systems", "Performance Tuning"];
+const skills = [
+  "Go",
+  "React",
+  "REST APIs",
+  "SQL",
+  "UI Systems",
+  "Performance Tuning",
+];
 
 function App() {
   return (
     <div className="shell">
       <header className="topbar">
-        <p className="brand">AARYAN DEV</p>
+        <p className="brand">Barath Kumar</p>
         <nav>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
@@ -35,7 +45,8 @@ function App() {
           <p className="kicker">FULL-STACK PORTFOLIO</p>
           <h1>Building sharp web products with Go and React.</h1>
           <p className="subtitle">
-            I design and build fast, practical applications with scalable backends and polished user interfaces.
+            I design and build fast, practical applications with scalable
+            backends and polished user interfaces.
           </p>
           <div className="hero-actions">
             <a className="btn primary" href="#projects">
@@ -79,9 +90,14 @@ function App() {
 
         <section id="contact" className="contact">
           <h2>Let&apos;s build something useful.</h2>
-          <p>Available for freelance and full-time product engineering roles.</p>
-          <a className="btn primary" href="mailto:hello@example.com">
-            hello@example.com
+          <p>
+            Available for freelance and full-time product engineering roles.
+          </p>
+          <a
+            className="btn primary"
+            href="mailto:Barathkumar@gmail.comexample.com"
+          >
+            Barathkumar@gmail.comexample.com
           </a>
         </section>
       </main>
