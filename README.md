@@ -1,6 +1,7 @@
 # Go + React Portfolio
 
 Simple portfolio app:
+
 - Go (`net/http`) serves the site on port `8080`
 - React renders the UI in the browser
 
@@ -22,6 +23,7 @@ docker run --rm -p 8080:8080 go-react-app
 ## EC2 + Nginx + GitHub Actions deployment
 
 This repo includes:
+
 - `Dockerfile`: multi-stage Go image build
 - `docker-compose.yml`: runs `app` + `nginx`
 - `nginx/nginx.conf`: reverse proxy `nginx -> app:8080`
@@ -39,6 +41,7 @@ sudo chown -R $USER:$USER /opt/go-react-app
 ```
 
 Make sure EC2 security group allows:
+
 - `80` from internet
 - `22` only from your trusted IP
 
@@ -66,14 +69,17 @@ Set these in `Settings -> Secrets and variables -> Actions`:
 ### 4) IAM permissions needed
 
 The IAM user for GitHub Actions should allow:
+
 - ECR login and image push (`ecr:*` for auth + push actions)
 
 EC2 instance role (or EC2 user credentials) should allow:
+
 - ECR pull (`ecr:GetAuthorizationToken`, `ecr:BatchGetImage`, `ecr:GetDownloadUrlForLayer`)
 
 ### 5) Deploy
 
 Push to `main`. Workflow will:
+
 1. Build Docker image
 2. Push image to ECR tagged with commit SHA
 3. Copy `docker-compose.yml` and Nginx config to EC2
